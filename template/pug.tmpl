@@ -1,0 +1,20 @@
+meta(charset="utf-8")
+title {{ .Title }}
+meta(name="viewport" content="width=device-width,initial-scale=1")
+meta(name="title" content="{{ .Title }}")
+meta(name="description" content="{{ .Description }}")
+meta(name="keywords" content="{{ .Keywords }}")
+
+// Open Graph Meta Tags
+meta(property="og:type" content="website")
+meta(property="og:url" content="{{ .Url }}")
+meta(property="og:title" content="{{ .Title }}")
+meta(property="og:description" content="{{ .Description }}")
+meta(property="og:image" content="{{ .ImgPath }}")
+
+// Twitter
+meta(property="twitter:card" content="summary_large_image")
+meta(property="twitter:url" content="{{ .Url }}")
+meta(property="twitter:title" content="{{ .Title }}")
+meta(property="twitter:description" content="{{ .Description }}")
+meta(property="twitter:image" content="{{ .ImgPath }}")

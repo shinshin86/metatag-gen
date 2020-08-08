@@ -89,7 +89,7 @@ metatag-gen --help
 
 I will also support these templates.
 
-- [ ] pug  (Node.js)
+- [x] pug  (Node.js)
 - [ ] HAML (Ruby) 
 - [ ] Slim (Ruby)
 
