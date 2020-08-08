@@ -39,6 +39,9 @@ func main() {
 	case "haml":
 		tmplType = "haml.tmpl"
 
+	case "slim":
+		tmplType = "slim.tmpl"
+
 	default:
 		log.Fatal("Invalid template type")
 	}

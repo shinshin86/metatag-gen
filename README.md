@@ -4,6 +4,15 @@ CLI tool of meta tag generator.
 
 
 
+## Support Templates
+
+* HTML
+* Pug (Node.js)
+* HAML (Ruby)
+* Slim (Ruby)
+
+
+
 ## Install
 
 ```bash
@@ -82,14 +91,3 @@ You can also check with this command.
 ```bash
 metatag-gen --help
 ```
-
-
-
-## TODO
-
-I will also support these templates.
-
-- [x] pug  (Node.js)
-- [x] HAML (Ruby)
-- [ ] Slim (Ruby)
-
