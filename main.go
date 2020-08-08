@@ -36,6 +36,9 @@ func main() {
 	case "pug":
 		tmplType = "pug.tmpl"
 
+	case "haml":
+		tmplType = "haml.tmpl"
+
 	default:
 		log.Fatal("Invalid template type")
 	}

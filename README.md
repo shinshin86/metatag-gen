@@ -90,6 +90,6 @@ metatag-gen --help
 I will also support these templates.
 
 - [x] pug  (Node.js)
-- [ ] HAML (Ruby) 
+- [x] HAML (Ruby)
 - [ ] Slim (Ruby)
 
