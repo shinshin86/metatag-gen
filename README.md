@@ -36,7 +36,7 @@ metatag-gen {parameters}
 ### Example
 
 ```bash
-go run main.go -u https://github.com/shinshin86/metatag-gen -t shinshin86/metatag-gen -d "CLI tool of meta tag generator." -k "meta tag, generator, cli" -i "/examples/images"
+metatag-gen -u https://github.com/shinshin86/metatag-gen -t shinshin86/metatag-gen -d "CLI tool of meta tag generator." -k "meta tag, generator, cli" -i "/examples/images"
 ```
 
 output(HTML)
@@ -91,3 +91,35 @@ You can also check with this command.
 ```bash
 metatag-gen --help
 ```
+
+
+
+## Development
+
+Use [shogo82148/assets-life](https://github.com/shogo82148/assets-life)
+
+
+
+To generate the package, I'm running this command first
+(You don't have to run this command, but I'm writing it for my own history.)
+
+```bash
+assets-life templates/ templates
+```
+
+
+
+To regenerate the package, run this command.
+
+```bash
+go generate  ./templates
+```
+
+
+
+Running this tool
+
+```
+go run main.go {parameters}
+```
+

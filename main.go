@@ -2,10 +2,13 @@ package main
 
 import (
 	"flag"
+	"io/ioutil"
 	"log"
 	"os"
 	"path"
 	"text/template"
+
+	"github.com/shinshin86/metatag-gen/templates"
 )
 
 func main() {
@@ -46,7 +49,18 @@ func main() {
 		log.Fatal("Invalid template type")
 	}
 
-	t, err := template.New(tmplType).ParseFiles(path.Join("template", tmplType))
+	f, err := templates.Root.Open(path.Join("/", tmplType))
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer f.Close()
+
+	b, err := ioutil.ReadAll(f)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	t, err := template.New(tmplType).Parse(string(b))
 	if err != nil {
 		log.Fatal(err)
 	}
