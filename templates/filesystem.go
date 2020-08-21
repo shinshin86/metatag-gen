@@ -52,10 +52,17 @@ var Root http.FileSystem = fileSystem{
 		child:   -1,
 	},
 	file{
+		name:    "/jsx.tmpl",
+		content: "<meta charSet=\"utf-8\" />\n<meta httpEquiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n<title>{{ .Title }}</title>\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<meta name=\"title\" content=\"{{ .Title }}\" />\n<meta name=\"description\" content=\"{{ .Description }}\" />\n<meta name=\"keywords\" content=\"{{ .Keywords }}\" />\n\n{/* Open Graph Meta Tags */}\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:url\" content=\"{{ .Url }}\" />\n<meta property=\"og:title\" content=\"{{ .Title }}\" />\n<meta property=\"og:description\" content=\"{{ .Description }}\" />\n<meta property=\"og:image\" content=\"{{ .ImgPath }}\" />\n\n{/* Twitter */}\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<meta property=\"twitter:url\" content=\"{{ .Url }}\" />\n<meta property=\"twitter:title\" content=\"{{ .Title }}\" />\n<meta property=\"twitter:description\" content=\"{{ .Description }}\" />\n<meta property=\"twitter:image\" content=\"{{ .ImgPath }}\" />",
+		mode:    0644,
+		next:    6,
+		child:   -1,
+	},
+	file{
 		name:    "/pug.tmpl",
 		content: "meta(charset=\"utf-8\")\nmeta(http-equiv=\"X-UA-Compatible\" content=\"IE=edge\")\ntitle {{ .Title }}\nmeta(name=\"viewport\" content=\"width=device-width,initial-scale=1\")\nmeta(name=\"title\" content=\"{{ .Title }}\")\nmeta(name=\"description\" content=\"{{ .Description }}\")\nmeta(name=\"keywords\" content=\"{{ .Keywords }}\")\n\n// Open Graph Meta Tags\nmeta(property=\"og:type\" content=\"website\")\nmeta(property=\"og:url\" content=\"{{ .Url }}\")\nmeta(property=\"og:title\" content=\"{{ .Title }}\")\nmeta(property=\"og:description\" content=\"{{ .Description }}\")\nmeta(property=\"og:image\" content=\"{{ .ImgPath }}\")\n\n// Twitter\nmeta(property=\"twitter:card\" content=\"summary_large_image\")\nmeta(property=\"twitter:url\" content=\"{{ .Url }}\")\nmeta(property=\"twitter:title\" content=\"{{ .Title }}\")\nmeta(property=\"twitter:description\" content=\"{{ .Description }}\")\nmeta(property=\"twitter:image\" content=\"{{ .ImgPath }}\")",
 		mode:    0644,
-		next:    6,
+		next:    7,
 		child:   -1,
 	},
 	file{

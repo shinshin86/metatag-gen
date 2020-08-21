@@ -45,6 +45,9 @@ func main() {
 	case "slim":
 		tmplType = "slim.tmpl"
 
+	case "jsx":
+		tmplType = "jsx.tmpl"
+
 	default:
 		log.Fatal("Invalid template type")
 	}

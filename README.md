@@ -10,6 +10,7 @@ CLI tool of meta tag generator.
 * Pug (Node.js)
 * HAML (Ruby)
 * Slim (Ruby)
+* JSX
 
 
 
